@@ -1,0 +1,7 @@
+= simple_form_for [ :admin, @administrator ] do |f|
+  = f.input :first_name, label: false, placeholder: "First Name"
+  = f.input :last_name, label: false, placeholder: "Last Name"
+  = f.input :email, label: false, placeholder: "E-mail"
+  = f.input :password, label: false, placeholder: "Password"
+  = f.input :password_confirmation, label: false, placeholder: "Confirm Password"
+  = f.submit 'Submit'

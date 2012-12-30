@@ -1,0 +1,5 @@
+= simple_form_for :session, :url => admin_sessions_path do |f|
+
+  = f.input :email, label: false, placeholder: "Email"
+  = f.input :password, label: false, placeholder: "Password"
+  = f.submit 'Login'

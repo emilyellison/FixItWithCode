@@ -11,6 +11,7 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'inherited_resources'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'redcarpet'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

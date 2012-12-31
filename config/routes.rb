@@ -6,7 +6,7 @@ FixItWithCode::Application.routes.draw do
     
     root to: 'administrators#index'
     
-    resources :administrators
+    resources :administrators, :posts
     resources :sessions, only: [ :new, :create, :destroy ]
     match '/login' => 'sessions#new', :as => :login
     match '/logout' => 'sessions#destroy', :as => :logout

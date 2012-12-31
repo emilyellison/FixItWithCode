@@ -1,0 +1,6 @@
+%h1= @post.title
+%p By, #{@post.administrator.name}
+= convert_to_markdown @post.description
+%p= @post.approval
+%p Created #{pretty_date @post.created_at}
+%p= link_to 'Back', admin_posts_path

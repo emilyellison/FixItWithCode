@@ -3,6 +3,9 @@ class Administrator < ActiveRecord::Base
   # Gems
   has_secure_password
   
+  # Associations
+  has_many :posts
+  
   # Attributes
   attr_accessible :city, :email, :first_name, :github, :last_name, :linked_in, :password, :password_confirmation, :phone, :twitter
   

@@ -20,10 +20,14 @@ module ApplicationHelper
     image_tag('http://www.fixitwithcode.com/assets/twitter_profile-5a77947135ec6cf0f348d06ed66ecf8c.png', size: '28x28')
   end
   
-  def phone_number_link(text)
+  def phone_number_link text
     sets_of_numbers = text.scan(/[0-9]+/)
     number = "+1-#{sets_of_numbers.join('-')}"
     link_to text, "tel:#{number}"
+  end
+  
+  def pretty_date date_text
+    date_text.strftime('%B %e, %Y')
   end
   
 end

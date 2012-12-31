@@ -3,17 +3,17 @@
     .admin
       %p{ class: admin.first_name.downcase }= image_tag "#{admin.first_name.downcase}.jpeg", size: '308x206'
     
-      %p= admin.name
+      %h1.name= admin.name
     
       %p.telephone
-        = image_tag "telephone.png", size: '24x24'
-        %span= admin.phone
+        = telephone_icon
+        %span= phone_number_link admin.phone
     
-      %p.city
-        = image_tag "city.png", size: '24x24'
-        %span= admin.city
+      %p.email
+        = email_icon
+        %span= mail_to admin.email, admin.email, subject: 'Hi'
     
-      %p
-        = image_tag "#{admin.first_name.downcase}.jpeg", size: '75x50'
-        = image_tag "#{admin.first_name.downcase}.jpeg", size: '75x50'
-        = image_tag "#{admin.first_name.downcase}.jpeg", size: '75x50'
+      %p.profiles
+        = link_to github_icon, admin.github
+        = link_to linked_in_icon, admin.linked_in
+        = link_to twitter_icon, admin.twitter

@@ -1,4 +1,19 @@
 #public
   - @administrators.each do |admin|
-    %p{ class: admin.first_name }= image_tag "#{admin.first_name.downcase}.jpeg", size: '308x206'
-    %p= admin.name
+    .admin
+      %p{ class: admin.first_name.downcase }= image_tag "#{admin.first_name.downcase}.jpeg", size: '308x206'
+    
+      %p= admin.name
+    
+      %p.telephone
+        = image_tag "telephone.png", size: '40x40'
+        %span= admin.phone
+    
+      %p.city
+        = image_tag "city.png", size: '40x40'
+        %span= admin.city
+    
+      %p
+        = image_tag "#{admin.first_name.downcase}.jpeg", size: '75x50'
+        = image_tag "#{admin.first_name.downcase}.jpeg", size: '75x50'
+        = image_tag "#{admin.first_name.downcase}.jpeg", size: '75x50'

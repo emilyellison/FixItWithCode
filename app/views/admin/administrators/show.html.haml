@@ -1,4 +1,8 @@
 %h1= @administrator.name
-%p
-  E-mail:
-  = @administrator.email
+%hr
+- %w( first_name last_name email city phone github linked_in twitter).each do |attribute|
+  %p
+    = attribute.split('_').join(' ').capitalize
+  %p
+    = @administrator.send(attribute)
+  %br

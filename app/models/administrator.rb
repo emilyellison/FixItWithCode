@@ -4,7 +4,7 @@ class Administrator < ActiveRecord::Base
   has_secure_password
   
   # Attributes
-  attr_accessible :email, :first_name, :last_name, :password, :password_confirmation
+  attr_accessible :city, :email, :first_name, :github, :last_name, :linked_in, :password, :password_confirmation, :phone, :twitter
   
   # Validations
   validates_presence_of :first_name, :last_name, :email

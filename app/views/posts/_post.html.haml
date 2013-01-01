@@ -1,0 +1,9 @@
+.post
+  %h1= post.title.upcase
+  .post-content
+    - if params[:id].nil?
+      = truncate(convert_to_markdown(post.description), length: 550).html_safe
+      = link_to 'READ MORE &rarr;'.html_safe, post_url(post)
+    - else
+      = convert_to_markdown post.description
+    %p.date Written by #{post.administrator.name} on #{pretty_date post.created_at}

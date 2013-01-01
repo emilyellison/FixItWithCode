@@ -1,6 +1,9 @@
 FixItWithCode::Application.routes.draw do
 
-  root to: 'public#index'
+  root to: 'posts#index'
+  
+  match '/blog'           => 'posts#index', as: :posts
+  match '/blog/posts/:id' => 'posts#show', as: :post
   
   namespace :admin do
     

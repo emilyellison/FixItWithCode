@@ -5,9 +5,11 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags		
-    %link{ href: 'http://fonts.googleapis.com/css?family=Source+Sans+Pro', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: 'http://fonts.googleapis.com/css?family=Inconsolata', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: 'http://fonts.googleapis.com/css?family=Allura', rel: 'stylesheet', type: 'text/css' }
     
   %body
-    = render 'shared/header'
     .container
-      = yield
+      = render 'shared/header'
+      .content
+        = yield

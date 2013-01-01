@@ -3,9 +3,9 @@
   #admins
     - @administrators.each do |admin|
       .admin
-        %p{ class: admin.first_name.downcase }= image_tag "#{admin.first_name.downcase}.jpeg", size: '308x206'
+        %p{ class: admin.first_name.downcase }= image_tag "#{admin.first_name.downcase}.jpeg", size: '185x124'
     
-        %h1.name= admin.name
+        %h3.name= admin.name
     
         %p.telephone
           = telephone_icon
@@ -23,6 +23,8 @@
   #posts
     - @posts.each do |post|
       .post
-        %h1= post.title
-        %p= convert_to_markdown post.description
-        %p Written by #{post.administrator.name} on #{pretty_date post.created_at}
+        %h1= post.title.upcase
+        .post-content
+          = truncate(convert_to_markdown(post.description), length: 550).html_safe
+          = link_to 'READ MORE &rarr;'.html_safe, '#'
+          %p.date Written by #{post.administrator.name} on #{pretty_date post.created_at}

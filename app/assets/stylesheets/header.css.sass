@@ -2,23 +2,23 @@
 	color: #42b7fd 
 
 #box 
-	width: 1300px
-	margin: 20px auto
+	width: 1060px
+	margin: 0px auto
 	padding: 0
 	text-align: center
 	position: relative
+	top: 30px
 
 .banner 
-	width: 1200px
+	width: 960px
 	height: 75px
 	background: $teal
-	margin-left: 50px
+	margin-left: 0px
 	box-shadow: 0 0 10px rgba(0,0,0,0.4)
 	border-top: 1px solid $grey
 	border-bottom: 1px solid $grey
 
 .banner p 
-	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 	font-weight: 300
 	font-size: 45px
 	text-transform: capitalize
@@ -27,42 +27,16 @@
 	padding: 14px
 	text-shadow: 3px 3px 3px $grey
 
-
-.banner:before 
-	content: ""
-	position: absolute
-	bottom: -50px
-	left: 50px
-	width: 0
-	height: 0
-	border-right: 70px solid $grey
-	border-top: 0px solid transparent
-	border-bottom: 50px solid transparent
-
-
-.banner:after 
-	content: ""
-	position: absolute
-	bottom: -50px
-	right: 50px
-	width: 0
-	height: 0
-	border-left: 70px solid $grey
-	border-top: 0px solid transparent
-	border-bottom: 50px solid transparent
-
-
 .ribbon 
 	width: 120px
 	height: 75px
 	background: $teal
 	position: absolute
 	z-index: -2
-
-
+	
 .ribbon.left 
-	top: 53px
-	left: 0
+	top: 33px
+	left: -50px
 
 
 .ribbon.left:before 
@@ -90,8 +64,8 @@
 
 
 .ribbon.right 
-	top: 53px
-	right: 0
+	top: 33px
+	right: 50px
 
 
 .ribbon.right:before 
@@ -116,3 +90,16 @@
 	border-left: 30px solid $teal
 	border-top: 37.5px solid transparent
 	border-bottom: 0 solid transparent
+
+#menu
+	font-family: Allura
+	margin-top: 50px
+	text-align: center
+	font-size: 32px
+	
+	a
+		color: $teal
+		margin: 0px 10px
+		
+		&:hover
+			color: darkorange

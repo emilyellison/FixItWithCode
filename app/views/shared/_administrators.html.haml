@@ -3,7 +3,7 @@
     .admin
       %p{ class: admin.first_name.downcase }= image_tag "#{admin.first_name.downcase}.jpeg", size: '185x124'
   
-      %h3.name= admin.name
+      %h3.name= link_to admin.name, '#'
   
       %p.telephone
         = telephone_icon

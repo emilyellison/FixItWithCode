@@ -2,8 +2,8 @@
   %h1= link_to post.title.upcase, post_url(post)
   .post-content
     - if params[:id].nil?
-      = truncate(convert_to_markdown(post.description), length: 550).html_safe
+      = truncate(convert_to_markdown(post.description), length: 800).html_safe
       = link_to 'READ MORE &rarr;'.html_safe, post_url(post)
     - else
       = convert_to_markdown post.description
-    %p.date Written by #{post.administrator.name} on #{pretty_date post.created_at}
+    %p.date Written by #{link_to post.administrator.name, '#'} on #{pretty_date post.created_at}

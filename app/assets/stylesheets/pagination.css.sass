@@ -1,0 +1,40 @@
+#pagination-wrapper
+	clear: both
+	position: absolute
+	bottom: 20px
+	left: 50%
+	
+	#pagination
+		position: relative
+		left: -50%
+		margin: 0px 0px 0px 205px
+		
+		.page.current, .page a
+			width: 20px
+			height: 20px
+			display: inline-block
+			border-radius: 20px
+			color: white
+			background: $green
+			box-shadow: 0px 0px 3px black
+			text-align: center
+			line-height: 20px
+			&:hover
+				background: $teal
+	
+		.page.current
+			background: $teal
+
+		.first a, .prev a, .next a, .last a
+			display: inline-block
+			border-radius: 20px
+			color: white
+			background: $green
+			box-shadow: 0px 0px 3px $brown
+			text-align: center
+			line-height: 20px
+			padding: 0px 10px 
+			&:hover
+				background: $teal
+	
+	

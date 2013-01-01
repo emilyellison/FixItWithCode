@@ -1,5 +1,5 @@
 .post
-  %h1= post.title.upcase
+  %h1= link_to post.title.upcase, post_url(post)
   .post-content
     - if params[:id].nil?
       = truncate(convert_to_markdown(post.description), length: 550).html_safe

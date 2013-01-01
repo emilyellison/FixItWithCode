@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   
   def index
-    @posts = Post.limit(2)
+    @posts = Post.page(params[:page]).per(2)
   end
   
   def show

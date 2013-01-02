@@ -1,0 +1,26 @@
+#administrators
+  .administrator
+    .administrator_pics
+      = link_to '#' do
+        %div{ id: @administrator.first_name.downcase }
+        
+  .administrator
+    .administrator_text
+      %div{ id: "#{@administrator.first_name.downcase}_profile"}
+        
+        %h1.name= link_to @administrator.name, '#'
+
+        %p.telephone
+          = telephone_icon(24)
+          %span= phone_number_link @administrator.phone
+
+        %p.email
+          = email_icon(24)
+          %span= mail_to @administrator.email, @administrator.email, subject: 'Hi'
+
+        %p.pull-right.profiles
+          = link_to github_icon(50), @administrator.github
+          = link_to linked_in_icon(50), @administrator.linked_in
+          = link_to twitter_icon(50), @administrator.twitter
+        
+        = convert_to_markdown @administrator.bio

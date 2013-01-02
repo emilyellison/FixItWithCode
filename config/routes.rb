@@ -4,6 +4,7 @@ FixItWithCode::Application.routes.draw do
   
   match '/blog'           => 'posts#index', as: :posts
   match '/blog/posts/:id' => 'posts#show', as: :post
+  match '/about'          => 'administrators#index', as: :administrators
   
   namespace :admin do
     

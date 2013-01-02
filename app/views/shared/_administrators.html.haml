@@ -1,19 +1,19 @@
-#admins
+#administrators_partial
   - @administrators.each do |admin|
-    .admin
+    .administrator
       %p{ class: admin.first_name.downcase }= image_tag "#{admin.first_name.downcase}.jpeg", size: '185x124'
   
       %h3.name= link_to admin.name, '#'
   
       %p.telephone
-        = telephone_icon
+        = telephone_icon 24
         %span= phone_number_link admin.phone
   
       %p.email
-        = email_icon
+        = email_icon 24
         %span= mail_to admin.email, admin.email, subject: 'Hi'
   
       %p.profiles
-        = link_to github_icon, admin.github
-        = link_to linked_in_icon, admin.linked_in
-        = link_to twitter_icon, admin.twitter
+        = link_to github_icon(28), admin.github
+        = link_to linked_in_icon(28), admin.linked_in
+        = link_to twitter_icon(28), admin.twitter

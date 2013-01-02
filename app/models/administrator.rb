@@ -7,7 +7,7 @@ class Administrator < ActiveRecord::Base
   has_many :posts
   
   # Attributes
-  attr_accessible :city, :email, :first_name, :github, :last_name, :linked_in, :password, :password_confirmation, :phone, :twitter
+  attr_accessible :bio, :city, :email, :first_name, :github, :last_name, :linked_in, :password, :password_confirmation, :phone, :twitter
   
   # Validations
   validates_presence_of :first_name, :last_name, :email

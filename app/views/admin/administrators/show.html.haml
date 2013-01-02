@@ -1,6 +1,6 @@
 %h1= @administrator.name
 %hr
-- %w( first_name last_name email city phone github linked_in twitter).each do |attribute|
+- %w( first_name last_name email city phone github linked_in twitter bio).each do |attribute|
   %p
     = attribute.split('_').join(' ').capitalize
   %p

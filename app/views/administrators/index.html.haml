@@ -12,15 +12,17 @@
           
           %h1.name= link_to admin.name, '#'
 
-          %h3.telephone
-            = telephone_icon(30)
+          %p.telephone
+            = telephone_icon(24)
             %span= phone_number_link admin.phone
 
-          %h3.email
-            = email_icon(30)
+          %p.email
+            = email_icon(24)
             %span= mail_to admin.email, admin.email, subject: 'Hi'
 
           %p.pull-right.profiles
-            = link_to github_icon(40), admin.github
-            = link_to linked_in_icon(40), admin.linked_in
-            = link_to twitter_icon(40), admin.twitter
+            = link_to github_icon(50), admin.github
+            = link_to linked_in_icon(50), admin.linked_in
+            = link_to twitter_icon(50), admin.twitter
+          
+          = convert_to_markdown admin.bio

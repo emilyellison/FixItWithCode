@@ -1,3 +1,67 @@
+#new_administrators
+
+	.administrator
+		display: block
+		height: 500px
+		float: left
+
+		#emily_pic, #neo_pic
+			border-radius: 200px
+			width: 400px
+			height: 400px
+			box-shadow: 0px 0px 3px $grey
+			&:hover
+				opacity: 0.6
+		
+		#emily_pic
+			float: left
+			background-image: url('emily.jpeg')
+			background-position: 30% 
+			background-size: 600px
+			margin: 0px 30px
+		
+		#neo_pic
+			float: left
+			background-image: url('neo.jpeg')
+			background-position: center
+			background-size: 700px
+			margin: 0px 30px
+			
+		#emily_pic.stretch, #neo_pic.stretch
+			float: none
+			width: 845px
+			opacity: 1.0
+			border-radius: 2px
+			-webkit-transition: all 0.75s ease
+			-moz-transition: all 0.75s ease
+			-o-transition: all 0.75s ease
+			transition: all 0.75s ease
+	    
+		#neo_profile, #emily_profile
+			padding: 10px 25px
+			position: absolute
+			width: 845px
+			
+			h1
+				margin-bottom: 10px
+			
+							
+			p.telephone, p.email
+				
+				span
+					position: relative
+					top: -7px
+			
+			p.profiles
+				height: 0px
+				position: relative
+				top: -100px
+				left: 7px
+			
+				a:hover
+					opacity: 0.6
+				
+					
 #administrators
 	.administrator_pics
 		

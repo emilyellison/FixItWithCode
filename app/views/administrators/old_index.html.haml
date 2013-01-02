@@ -1,12 +1,15 @@
-#new_administrators
+#administrators
   - @administrators.each do |administrator|
     .administrator
-      = link_to '#' do
-        %div{ id: "#{administrator.first_name.downcase}_pic" }
-        .spacer &nbsp;
+      .administrator_pics
+        = link_to '#' do
+          %div{ id: administrator.first_name.downcase }
           
+  - @administrators.each do |administrator|
+    .administrator
+      .administrator_text
         %div{ id: "#{administrator.first_name.downcase}_profile"}
-        
+          
           %h1.name= link_to administrator.name, administrator_url(first_name: administrator.first_name)
 
           %p.telephone
@@ -21,5 +24,5 @@
             = link_to github_icon(50), administrator.github
             = link_to linked_in_icon(50), administrator.linked_in
             = link_to twitter_icon(50), administrator.twitter
-        
+          
           = convert_to_markdown administrator.bio

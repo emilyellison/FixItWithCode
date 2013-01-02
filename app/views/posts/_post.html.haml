@@ -2,7 +2,7 @@
   %h1= link_to post.title.upcase, post_url(post)
   .post-content
     - if params[:id].nil?
-      = truncate(convert_to_markdown(post.description), length: 800).html_safe
+      = truncate(convert_to_markdown(post.description), length: 700).html_safe
       = link_to 'READ MORE &rarr;'.html_safe, post_url(post)
     - else
       = convert_to_markdown post.description

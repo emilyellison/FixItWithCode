@@ -23,3 +23,36 @@
             = link_to twitter_icon(50), administrator.twitter
         
           = convert_to_markdown administrator.bio
+          
+:javascript
+  $(document).ready( function() { 
+
+    $('#emily_profile').hide();
+    $('#neo_profile').hide();
+
+    $("#neo_pic").live('click', function() {
+      $('#emily_pic').hide();
+      $(this).addClass('stretch');
+      $("#neo_profile").slideDown();
+    });
+
+    $("#neo_pic.stretch").live('click', function() {
+      $('#emily_pic').show();
+      $(this).removeClass('stretch');
+      $("#neo_profile").hide();
+    });
+
+    $("#emily_pic").live('click', function() {
+      $('#neo_pic').hide();
+      $(this).addClass('stretch');
+      $("#emily_profile").slideDown();		
+    });
+    
+    $("#emily_pic.stretch").live('click', function() {
+      $('#neo_pic').show();
+      $(this).removeClass('stretch');
+      $("#emily_profile").hide();
+    });
+    
+	
+  });

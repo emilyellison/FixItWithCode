@@ -9,7 +9,7 @@ FixItWithCode::Application.routes.draw do
   
   namespace :admin do
     
-    root to: 'administrators#index'
+    root to: 'posts#index'
     
     resources :administrators, :posts
     resources :sessions, only: [ :new, :create, :destroy ]

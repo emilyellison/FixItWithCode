@@ -1,0 +1,102 @@
+$brown: #27191C
+$grey: #2D3839
+$teal: #126158
+$green: #6E9987
+$beige: #E0E4CE
+$white: ghostwhite
+
+$script: Allura
+$code: Inconsolata
+$normal: Galdeano
+
+html	
+	height: 100%
+	
+	body
+		background: url('central_park.jpg')
+		background-size: 100% 100% 
+		background-repeat: no-repeat
+		font-family: $code, 'courier new', courier, serif
+		height: 100%
+		
+.container
+	height: 100%
+	margin: 0px auto 
+	width: 960px
+	background: ghostwhite
+	box-shadow: 0px 0px 50px $brown
+
+.content
+	margin-top: 0px
+	padding: 20px
+
+.pull-left
+	float: left
+
+.pull-right
+	float: right
+
+.clear
+	clear: both
+
+a 
+	text-decoration: none
+	color: $teal
+	&:hover
+		color: darkorange
+	
+h1
+	font-size: 24px
+	line-height: 34px
+	margin-bottom: 20px
+
+h2
+	font-size: 22px
+	line-height: 32px
+	
+h3
+	font-size: 20px
+	line-height: 30px
+	
+input, label, textarea, p
+	font-size: 16px
+	line-height: 26px
+	
+input, label, textarea
+	font-family: $code
+	padding: 3px 10px
+	margin: 5px 0px
+	
+input, textarea
+	width: 60%
+	
+input.checkbox
+	width: auto
+	
+.btn
+	margin-top: 20px
+	border: 1px solid $teal
+	background: $green
+	border-radius: 8px
+	-moz-border-radius: 8px
+	-webkit-border-radius: 8px
+	padding: 5px 10px
+	font-size: 16px
+	color: white
+	width: auto
+	
+	&:hover
+		background: $teal
+		color: white
+		
+table
+	tr, th, td
+		padding: 10px
+		border-bottom: 1px solid black
+		
+	tr
+		width: 100%
+		
+	th, td
+		width: 20%
+		text-align: center

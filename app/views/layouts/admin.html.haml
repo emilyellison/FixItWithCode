@@ -2,21 +2,31 @@
 %html
   %head
     %title Fix It With Code  
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
+    = stylesheet_link_tag    "admin/application", :media => "all"
+    = javascript_include_tag "admin/application"
     = csrf_meta_tags		
-    %link{ href: 'http://fonts.googleapis.com/css?family=Source+Sans+Pro', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: 'http://fonts.googleapis.com/css?family=Inconsolata', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: 'http://fonts.googleapis.com/css?family=Allura', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: 'http://fonts.googleapis.com/css?family=Galdeano', rel: 'stylesheet', type: 'text/css' }
     
   %body
-    = render 'shared/header'
     .container
-      .subheader.pull-right
+    
+      #box
+        .banner
+          .ribbon.left
+          %p= link_to 'FIX IT WITH CODE', root_url
+          .ribbon.right
+          
+      #menu
         - if current_admin.present?
           = link_to 'Administrators', admin_administrators_url
-          |
+          &bull;
           = link_to 'Posts', admin_posts_url
-          |
+          &bull;
           = link_to 'Logout', admin_logout_url
         - else
           = link_to 'Login', admin_login_url
-      = yield
+
+      .content
+        = yield

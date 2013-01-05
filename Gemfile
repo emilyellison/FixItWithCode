@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'capistrano'
-gem 'sqlite3'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'less-rails'
@@ -13,6 +12,10 @@ gem 'inherited_resources'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'redcarpet'
 gem 'kaminari'
+
+group :development, :test do
+  gem 'sqlite3'
+end
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

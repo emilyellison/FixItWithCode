@@ -12,6 +12,7 @@ gem 'inherited_resources'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'redcarpet'
 gem 'kaminari'
+gem 'libv8', '~> 3.11.8'
 
 group :development, :test do
   gem 'sqlite3'

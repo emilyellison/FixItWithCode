@@ -13,22 +13,24 @@ html
 	height: 100%
 	
 	body
-		background: url('central_park.jpg')
-		background-size: 100% 100% 
+		background: url('central_park.jpg') 
 		background-repeat: no-repeat
+		background-attachment: fixed
+		background-size: 100% 100% 
 		font-family: $code, 'courier new', courier, serif
 		height: 100%
 		
 .container
-	height: 100%
 	margin: 0px auto 
 	width: 960px
 	background: ghostwhite
 	box-shadow: 0px 0px 50px $brown
+	min-height: inherit
 
 .content
 	margin-top: 0px
 	padding: 20px
+	min-height: inherit
 
 .pull-left
 	float: left

@@ -2,6 +2,8 @@
 #posts
   - @posts.each do |post|
     = render 'posts/post', post: post
-#pagination-wrapper
-  #pagination
-    = paginate @posts
+.clear
+  #pagination-wrapper
+    #pagination
+      = paginate @posts
+.clear

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   
   def index
-    @posts = Post.most_recent.approved.page(params[:page]).per(2)
+    @posts = Post.most_recent.approved.page(params[:page]).per(3)
   end
   
   def show

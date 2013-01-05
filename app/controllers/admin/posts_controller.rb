@@ -1,6 +1,10 @@
 class Admin::PostsController < Admin::ApplicationController
   inherit_resources
 
+  def index
+    @posts = Post.most_recent.all
+  end
+
   def new
     @post = @current_admin.posts.new
   end

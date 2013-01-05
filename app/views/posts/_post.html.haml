@@ -9,7 +9,7 @@
       - else
         = convert_to_markdown post.description
       
-      %p.date Written by #{link_to post.administrator.name, administrator_url(first_name: post.administrator.first_name)} on #{pretty_date post.created_at}
+      %p.date Written by #{link_to post.administrator.name, administrator_url(first_name: post.administrator.first_name)} on #{pretty_date post.updated_at}
       
   - if !params[:id].nil?
     = link_to '&larr; BACK TO BLOG'.html_safe, posts_url, id: 'back_to_blog'

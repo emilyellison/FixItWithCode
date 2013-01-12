@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   belongs_to :author, class_name: 'Administrator', foreign_key: :administrator_id
   
   # Attributes
-  attr_accessible :administrator_id, :approved, :description, :title
+  attr_accessible :administrator_id, :approved, :content, :title
   
   # Scopes
   scope :approved, where(approved: true)

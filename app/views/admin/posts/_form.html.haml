@@ -1,5 +1,5 @@
 = simple_form_for [ :admin, @post ] do |f|
   = f.input :title, label: false, placeholder: "Title"
-  = f.input :description, label: false, placeholder: "Description"
+  = f.input :content, label: false, placeholder: "Description"
   = f.input :approved, label: 'Approved', input_html: { class: 'checkbox' }
   = f.submit 'Submit', class: 'btn'

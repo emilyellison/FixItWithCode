@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130102003622) do
+ActiveRecord::Schema.define(:version => 20130112233401) do
 
   create_table "administrators", :force => true do |t|
     t.string   "first_name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20130102003622) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
-    t.text     "description"
+    t.text     "content"
     t.boolean  "approved"
     t.integer  "administrator_id"
     t.datetime "created_at",       :null => false

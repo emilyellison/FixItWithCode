@@ -1,6 +1,6 @@
 %h1= @post.title
 %p By, #{@post.author.name}
-= convert_to_markdown @post.description
+= convert_to_markdown @post.content
 %p= @post.approval
 %p Updated #{pretty_date @post.updated_at}
 %p= link_to 'Back', admin_posts_path

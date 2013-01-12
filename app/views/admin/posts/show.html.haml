@@ -1,5 +1,5 @@
 %h1= @post.title
-%p By, #{@post.administrator.name}
+%p By, #{@post.author.name}
 = convert_to_markdown @post.description
 %p= @post.approval
 %p Updated #{pretty_date @post.updated_at}

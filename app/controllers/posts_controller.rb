@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.approved.find(params[:id])
+    @comment = Comment.new
   end
   
   def feed

@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
   
   # Associations
   belongs_to :author, class_name: 'Administrator', foreign_key: :administrator_id
+  has_many :comments
   
   # Attributes
   attr_accessible :administrator_id, :approved, :content, :title

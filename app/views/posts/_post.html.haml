@@ -10,6 +10,9 @@
         = convert_to_markdown post.content
       
       %p.date Written by #{link_to post.author.name, administrator_url(first_name: post.author.first_name)} on #{pretty_date post.updated_at}
+    
+    - if params[:id].present?
+      = render 'comments/comments', comments: post.comments
       
   - if !params[:id].nil?
     = link_to '&larr; BACK TO BLOG'.html_safe, posts_url, id: 'back_to_blog'

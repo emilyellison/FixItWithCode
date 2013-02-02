@@ -1,0 +1,13 @@
+#comment-section
+  %hr
+  %h2 Comments
+  = render 'comments/form'
+  #comments
+    - if comments.empty?
+      %hr
+      #no_comments No one has commented on this post yet...
+    - else
+      - comments.approved.each do |comment|
+        %hr
+        = render 'comments/comment', comment: comment
+  %br

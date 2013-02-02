@@ -1,0 +1,6 @@
+%h3
+  = comment.name? ? comment.name : 'Unknown'
+  %span.created_at
+    = time_ago_in_words comment.created_at
+    ago
+= convert_to_markdown comment.content

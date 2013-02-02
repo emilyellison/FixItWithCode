@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @post.comments.build(params[:comment])
     if @comment.save
+      NotificationMailer.notify_about_comment(@comment).deliver
       respond_to do |format|
         format.html { redirect_to @post, notice: 'Your comment has been submitted.' }
         format.js

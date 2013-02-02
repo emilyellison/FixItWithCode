@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<p>Hey there,</p>
+		<p>You just received a comment on your post: <%= @comment.post.title %>.</p>
+		<p><%= @comment.name %> said:</p>
+		<p><%= @comment.content %></p>
+		<p>
+		  To approve or destroy this comment, log in and visit
+		  <a href='http://fixitwithcode.com/admin/comments'>the admin panel</a>.
+		</p>
+		<p>-Fix It With Code</p>
+	</body>
+</html>

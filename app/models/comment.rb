@@ -11,4 +11,9 @@ class Comment < ActiveRecord::Base
   scope :most_recent, order('created_at desc')
   scope :least_recent, order('created_at asc')
   
+  # Methods
+  def approval
+    self.approved? ? 'Approved' : 'Unapproved' 
+  end
+  
 end

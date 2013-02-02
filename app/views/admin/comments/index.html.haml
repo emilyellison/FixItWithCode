@@ -1,0 +1,17 @@
+%h1 
+  Comments
+  
+%table
+
+  %thead
+    %tr
+      %th Post
+      %th Commenter
+      %th Comment
+      %th Approval
+      %th
+      
+  %tbody
+    - @comments.each do |comment|
+      %tr{ id: dom_id(comment) }
+        = render 'admin/comments/comment', comment: comment

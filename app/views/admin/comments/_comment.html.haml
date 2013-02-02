@@ -1,0 +1,10 @@
+%td= link_to comment.post.title, admin_post_url(comment.post)
+%td= comment.name
+%td= comment.content
+%td= comment.approval
+%td
+  - if comment.approved?
+    = link_to 'Unapprove', admin_comment_url(comment, comment: { approved: false }), method: :put, remote: true
+  - else
+    = link_to 'Approve', admin_comment_url(comment, comment: { approved: true }), method: :put, remote: true
+  = link_to 'Destroy', admin_comment_url(comment), method: :delete, remote: true

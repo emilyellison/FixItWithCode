@@ -1,5 +1,13 @@
 module ApplicationHelper
   
+  def title
+    if params[:id].present?
+      return Post.find(params[:id]).title
+    else
+      return "Fix It With Code"
+    end
+  end
+  
   def telephone_icon length
     image_tag "telephone.png", size: "#{length}x#{length}"
   end

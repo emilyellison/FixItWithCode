@@ -7,6 +7,9 @@ class PostsController < ApplicationController
   def show
     @post = Post.approved.find(params[:id])
     @comment = Comment.new
+    if request.path != post_path(@post)
+      redirect_to @post, status: :moved_permanently
+    end
   end
   
   def feed

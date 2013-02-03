@@ -1,5 +1,9 @@
 class Post < ActiveRecord::Base
   
+  # Gems
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+  
   # Associations
   belongs_to :author, class_name: 'Administrator', foreign_key: :administrator_id
   has_many :comments

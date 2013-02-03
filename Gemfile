@@ -13,6 +13,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'redcarpet'
 gem 'kaminari'
 gem 'libv8', '~> 3.11.8'
+gem 'friendly_id'
 
 group :development, :test do
   gem 'sqlite3'

@@ -6,11 +6,11 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def new
-    @post = @current_admin.posts.new
+    @post = @current_admin.posts.build
   end
   
   def create
-    @post = @current_admin.posts.new(params[:post])
+    @post = @current_admin.posts.build(params[:post])
     if @post.save
       flash[:success] = 'Your post has been created.'
       redirect_to admin_post_url(@post)

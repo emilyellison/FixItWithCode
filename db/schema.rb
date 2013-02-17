@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130203162231) do
+ActiveRecord::Schema.define(:version => 20130217213746) do
 
   create_table "administrators", :force => true do |t|
     t.string   "first_name"
@@ -61,5 +61,17 @@ ActiveRecord::Schema.define(:version => 20130203162231) do
   end
 
   add_index "posts", ["slug"], :name => "index_posts_on_slug"
+
+  create_table "projects", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "github_link"
+    t.string   "website_link"
+    t.string   "photo_link"
+    t.integer  "administrator_id"
+    t.boolean  "approved",         :default => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+  end
 
 end

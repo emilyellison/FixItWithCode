@@ -11,9 +11,9 @@ FixItWithCode::Application.routes.draw do
   
   namespace :admin do
     
-    root to: 'posts#index'
+    root to: 'projects#index'
     
-    resources :administrators, :posts
+    resources :administrators, :posts, :projects
     resources :comments, only: [ :index, :update, :destroy ]
     resources :sessions, only: [ :new, :create, :destroy ]
     match '/login' => 'sessions#new', :as => :login

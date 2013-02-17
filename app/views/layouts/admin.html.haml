@@ -32,6 +32,8 @@
           
       #menu
         - if current_admin.present?
+          = link_to 'Projects', admin_projects_url
+          &bull;
           = link_to 'Posts', admin_posts_url
           &bull;
           = link_to 'Comments', admin_comments_url

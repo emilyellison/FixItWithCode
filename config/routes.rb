@@ -8,6 +8,7 @@ FixItWithCode::Application.routes.draw do
   match '/about'                   => 'administrators#index', as: :administrators
   match '/about/:first_name'       => 'administrators#show', as: :administrator
   match '/blog/posts/:id/comments' => 'comments#create', as: :comments
+  match '/portfolio'               => 'projects#index', as: :portfolio
   
   namespace :admin do
     

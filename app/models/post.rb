@@ -21,4 +21,8 @@ class Post < ActiveRecord::Base
     self.approved? ? 'Approved' : 'Unapproved' 
   end
   
+  def url
+    "http://www.fixitwithcode.com/blog/posts/" + self.slug
+  end
+  
 end

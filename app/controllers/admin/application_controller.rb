@@ -1,16 +1,11 @@
 class Admin::ApplicationController < ApplicationController
 
-  layout 'admin'
+  layout 'application'
 
-  before_filter :require_admin!
+  before_filter :require_admin!  
 
   private
-
-    def current_admin
-      @current_admin ||= Administrator.find(session[:admin_id]) unless session[:admin_id].nil?
-    end
-    helper_method :current_admin
-
+  
     def require_admin!
       reset_session unless session[:last_page_load].present? && session[:last_page_load] > 1.day.ago
       session[:last_page_load] = Time.now

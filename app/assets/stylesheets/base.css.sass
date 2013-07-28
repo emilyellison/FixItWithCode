@@ -1,95 +1,145 @@
-$brown: #27191C
-$grey: #2D3839
-$teal: #126158
-$green: #6E9987
 $beige: #E0E4CE
-$white: ghostwhite
+$brown: #27191C
+$green: #6E9987
+$grey: #2D3839
+$near_white: ghostwhite
+$teal: #126158
+$white: white
+$orange: darkorange
+$black: black
 
-$script: Allura, times, serif
 $code: Inconsolata, courier, sans-serif
 $normal: Galdeano, helvetica neue, helvetica, sans-serif
+$script: Allura, times, serif
+
+@mixin grey-box-shadow
+  box-shadow: 0px 0px 5px $beige
+  -moz-box-shadow: 0px 0px 5px $beige
+  -webkit-box-shadow: 0px 0px 5px $beige
+
+@mixin border-radius-2
+  border-radius: 2px
+  -moz-border-radius: 2px
+  -webkit-border-radius: 2px
 
 @mixin border-radius-4
-	border-radius: 4px
-	-moz-border-radius: 4px
-	-webkit-border-radius: 4px
+  border-radius: 4px
+  -moz-border-radius: 4px
+  -webkit-border-radius: 4px
 
-html	
-	height: 100%
-	
-	body
-		background: url('central_park.jpg') 
-		background-repeat: no-repeat
-		background-attachment: fixed
-		background-size: 100% 100% 
-		font-family: $code
-		height: 100%
-		
+@mixin border-radius-200
+  border-radius: 200px
+  -moz-border-radius: 200px
+  -webkit-border-radius: 200px
+
+body
+  background: url('central_park.jpg') 
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-size: 100% 100% 
+  font-family: $code
+
 .container
-	margin: 0px auto 
-	width: 960px
-	background: ghostwhite
-	box-shadow: 0px 0px 50px $brown
-	min-height: 100%
-
-.content
-	margin-top: 0px
-	padding: 20px
-	min-height: inherit
+  width: 960px
+  min-height: 850px
+  margin: 0px auto
+  padding-bottom: 20px
+  background-color: $near_white
+  box-shadow: 0px 0px 50px $black
+  -moz-box-shadow: 0px 0px 50px $black
+  -webkit-box-shadow: 0px 0px 50px $black
 
 .pull-left
-	float: left
+  float: left
 
 .pull-right
-	float: right
+  float: right
 
-.clear
-	clear: both
-
-a 
-	text-decoration: none
-	color: $teal
-	&:hover
-		color: darkorange
-	
+a
+  text-decoration: none
+  color: $teal
+    
+  &:hover
+    color: $orange
+    
+  img:hover
+    opacity: 0.6
+    
 h1
-	font-size: 24px
-	line-height: 34px
+  font-size: 30px
+  line-height: 40px
+  padding: 10px 20px 
 
 h2
-	font-size: 22px
-	line-height: 32px
-	
+  font-size: 26px
+  line-height: 36px
+  margin: 5px 0px
+
 h3
-	font-size: 20px
-	line-height: 30px
-	
-sup
-	position: relative
-	top: -2px
-	
+  font-size: 22px
+  line-height: 32px
+  margin: 5px 0px 0px
+
+h4
+  font-size: 18px
+  line-height: 28px
+
+hr
+  margin-left: -20px
+  margin-right: -20px
+  height: 1px
+  border: none
+  border-top: 1px solid $beige
+  
+
 em
-	font-style: italic
-	
-p, pre, li
-	font-size: 16px
-	line-height: 26px
-	
-pre 
-	margin: 10px 20px
-	
-p > code, pre > code
-	display: block
-	font-family: $code
-	padding: 10px 
-	border: 1px solid $grey
-	border-radius: 4px
-	-moz-border-radius: 4px
-	-webkit-border-radius: 4px
-	background: ghostwhite
-	margin: 10px 0px
+  font-style: italic
 
 code
-	white-space: pre-wrap
-	font-size: 14px
-	line-height: 20px
+  font-family: $code
+  font-size: 14px
+  line-height: 20px
+  white-space: pre-wrap
+
+p > code, pre > code
+  display: block
+  padding: 10px
+  background-color: $near_white
+  border: 1px solid $beige
+
+p
+  font-family: $normal
+  margin: 15px 0px
+  font-size: 16px
+  line-height: 26px
+
+  &.notice
+    padding: 5px 10px
+    background-color: $green
+    color: $white
+
+  &.code
+    font-family: $code
+  
+  &.right
+    text-align: right
+  
+  &.grey
+    color: $grey
+  
+  &.icon
+    margin: 2px 0px
+  
+    img
+      position: relative
+      top: 8px
+      margin-right: 8px
+  
+  &.small
+    font-size: 14px
+    line-height: 24px
+
+span
+  
+  &.small
+    font-size: 14px

@@ -1,111 +1,20 @@
-::selection  
-	color: #42b7fd 
-
-#box 
-	width: 1060px
-	margin: 0px auto
-	padding: 0
-	text-align: center
-	position: relative
-	top: 30px
-
-.banner 
-	width: 960px
-	height: 75px
-	background: $teal
-	box-shadow: 0 0 10px rgba(0,0,0,0.4)
-	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.4)
-	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4)
-	border-top: 1px solid $grey
-	border-bottom: 1px solid $grey
-
-.banner p 
-	font-weight: 300
-	font-size: 55px
-	text-transform: capitalize
-	color: #fff
-	margin: 10px 0px 0px
-	padding: 14px
-	text-shadow: 3px 3px 3px $grey
-	
-.banner p a
-	color: white
-	&:hover
-		color: white
-
-.ribbon 
-	width: 120px
-	height: 75px
-	background: $teal
-	position: absolute
-	z-index: -2
-	
-.ribbon.left 
-	top: 33px
-	left: -30px
-
-
-.ribbon.left:before 
-	content: ""
-	position: absolute
-	left: -30px
-	top: 0
-	width: 0
-	height: 0
-	border-right: 30px solid $teal
-	border-top: 0 solid transparent
-	border-bottom: 37.5px solid transparent
-
-
-.ribbon.left:after 
-	content: ""
-	position: absolute
-	left: -30px
-	bottom: 0
-	width: 0
-	height: 0
-	border-right: 30px solid $teal
-	border-top: 37.5px solid transparent
-	border-bottom: 0 solid transparent
-
-
-.ribbon.right 
-	top: 33px
-	right: 70px
-
-
-.ribbon.right:before 
-	content: ""
-	position: absolute
-	right: -30px
-	top: 0
-	width: 0
-	height: 0
-	border-left: 30px solid $teal
-	border-top: 0 solid transparent
-	border-bottom: 37.5px solid transparent
-
-
-.ribbon.right:after 
-	content: ""
-	position: absolute
-	right: -30px
-	bottom: 0
-	width: 0
-	height: 0
-	border-left: 30px solid $teal
-	border-top: 37.5px solid transparent
-	border-bottom: 0 solid transparent
-
-#menu
-	font-family: $script
-	margin-top: 50px
-	text-align: center
-	font-size: 32px
-	
-	a
-		color: $teal
-		margin: 0px 10px
-		
-		&:hover
-			color: darkorange
+header
+  padding-top: 30px
+  
+  .brand
+    background-color: $teal
+    text-align: center 
+    font-size: 55px
+    padding: 10px
+    
+    a
+      color: $white
+      text-shadow: 3px 3px 3px $grey
+    
+  .navigation
+    text-align: center
+    padding-top: 20px
+    
+    a
+      font-size: 32px
+      font-family: $script

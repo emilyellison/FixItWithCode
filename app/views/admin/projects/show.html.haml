@@ -1,13 +1,15 @@
-%h1= @project.title
-%p By, #{@project.administrator.name}
-= convert_to_markdown @project.content
-= image_tag(@project.photo_link, size: '200x200')
-%p 
-  Github:
-  = @project.github_link
-%p
-  Website:
-  = @project.website_link
-%p= @project.approval
-%p Updated #{pretty_date @project.updated_at}
-%p= link_to 'Back', admin_projects_path
+%h1= "#{@project.title}: #{@project.administrator.name}"
+
+.white.wrapper.top.left.bottom.right
+  = convert_to_markdown @project.content
+  = image_tag(@project.photo_link, size: '200x200')
+  %p 
+    Github:
+    = @project.github_link
+  %p
+    Website:
+    = @project.website_link
+  %p= @project.approval
+  %p Updated #{pretty_date @project.updated_at}
+
+= link_to 'Back', admin_projects_path, class: 'button'

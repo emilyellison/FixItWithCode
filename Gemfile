@@ -14,6 +14,7 @@ gem 'redcarpet'
 gem 'kaminari'
 gem 'libv8', '~> 3.11.8'
 gem 'friendly_id'
+gem 'gon'
 
 group :development, :test do
   gem 'sqlite3'

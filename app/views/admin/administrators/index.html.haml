@@ -1,6 +1,7 @@
 %h1 
   Administrators
-  = link_to 'NEW ADMINISTRATOR', new_admin_administrator_url, class: 'btn'
+  .pull-right= link_to '+', new_admin_administrator_url
+  .clear
 
 %table
 
@@ -9,12 +10,14 @@
       %th Name
       %th E-mail
       %th
-      
+
   %tbody
     - @administrators.each do |admin|
       %tr
         %td= admin.name
         %td= admin.email
         %td
-          = link_to 'Show', admin_administrator_url(admin)
-          = link_to 'Edit', edit_admin_administrator_url(admin)
+          .pull-right
+            = link_to 'Show', admin_administrator_url(admin)
+            = link_to 'Edit', edit_admin_administrator_url(admin)
+          .clear

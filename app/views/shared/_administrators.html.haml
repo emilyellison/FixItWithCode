@@ -1,19 +1,18 @@
-#administrators_partial
-  - @administrators.each do |admin|
-    .administrator
-      %p{ class: admin.first_name.downcase }= image_tag "#{admin.first_name.downcase}.jpeg", size: '185x124'
-  
-      %h3.name= link_to admin.name, administrator_url(first_name: admin.first_name)
-  
-      %p.telephone
-        = telephone_icon 24
-        %span= phone_number_link admin.phone
-  
-      %p.email
-        = email_icon 24
-        %span= mail_to admin.email, admin.email, subject: 'Hi'
-  
-      %p.profiles
-        = link_to github_icon(28), admin.github
-        = link_to linked_in_icon(28), admin.linked_in
-        = link_to twitter_icon(28), admin.twitter
+- @administrators.each do |admin|
+  .wrapper.left.top.small.white
+    = image_tag "#{admin.first_name.downcase}.jpeg", width: '100%'
+
+    %h3= link_to admin.name, administrator_url(first_name: admin.first_name)
+
+    %p.small.icon
+      = telephone_icon 24
+      = phone_number_link admin.phone
+
+    %p.small.icon
+      = email_icon 24
+      = mail_to admin.email, admin.email, subject: 'Hi'
+      
+    %p.small.icon
+      = link_to github_icon(28), admin.github
+      = link_to linked_in_icon(28), admin.linked_in
+      = link_to twitter_icon(28), admin.twitter

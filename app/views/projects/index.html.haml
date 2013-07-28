@@ -1,19 +1,29 @@
-.projects
-  #carousel_container
-    #left_scroll
-      = image_tag 'arrow.png', size: '50x100'
-    #carousel_inner
-      %ul#carousel_ul
-        - @projects.each do |project|
-          %li
-            = image_tag(project.photo_link, width: 380)
-            %div.text
-              %h1= project.title
-              = convert_to_markdown project.content
-              .links
-                = link_to image_tag("#{project.administrator.first_name.downcase}.jpeg", size: '50x50'), administrator_path(project.administrator)
-                = link_to github_icon(50), project.github_link if project.github_link.present?
-                = link_to 'LIVE', project.website_link, class: 'live' if project.website_link.present?
+#projects
+  #index
+
+    .quarter.grid
+  
+      .column
+        .wrapper.white.top.bottom.left
+          %ul.side-nav
+            - @projects.each do |project|
+              %li{ class: "#{'active' if project == @projects.first}"}= project.title
+  
+      .triple.column
+        .wrapper.white.top.bottom.left.right
+          
+          #project{ 'data-project-id' => ''}
+          
+            %h1.ribbon#project-title
+          
+            %p= image_tag('emily.jpeg', width: '100%', id: 'project-photo')
+          
+            %p#project-content
       
-    #right_scroll
-      = image_tag 'arrow.png', size: '50x100'
+            .pull-right
+              %ul
+                %li.pull-left= link_to github_icon(50), '#', id: 'project-github'
+                %li.pull-left= link_to "LIVE", "#", class: 'live', id: 'project-website'
+            .clear
+
+      .clear

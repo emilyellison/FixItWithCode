@@ -1,37 +1,23 @@
-#pagination-wrapper
-	margin: 0px 0px 0px 77px
-	
-	#pagination
-		position: relative
-		left: 50%
-		
-		.page.current, .page a
-			width: 30px
-			height: 30px
-			display: inline-block
-			border-radius: 20px
-			color: white
-			background: $green
-			box-shadow: 0px 0px 3px $grey
-			text-align: center
-			line-height: 30px
-			&:hover
-				background: $teal
-	
-		.page.current
-			background: $teal
-
-		.first a, .prev a, .next a, .last a
-			display: none
-/*display: inline-block
-			border-radius: 20px
-			color: white
-			background: $green
-			box-shadow: 0px 0px 3px $grey
-			text-align: center
-			line-height: 20px
-			padding: 0px 10px 
-			&:hover
-				background: $teal*/
-	
-	
+nav.pagination
+  text-align: center
+  margin: 30px 0px 10px
+  font-size: 18px
+  
+  span.page a
+    background-color: $green
+    color: $white
+    padding: 10px 15px
+    @include border-radius-200
+    
+    &:hover
+      background-color: $teal
+  
+  span.page.current
+    background-color: $teal
+    color: $white
+    padding: 10px 5px 10px 15px
+    margin-right: 10px
+    @include border-radius-200
+    
+  span.first, span.prev, span.next, span.last
+    display: none

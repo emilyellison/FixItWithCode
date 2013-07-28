@@ -1,5 +1,7 @@
-= simple_form_for [ :admin, @post ] do |f|
-  = f.input :title, label: false, placeholder: "Title"
-  = f.input :content, label: false, placeholder: "Description"
-  = f.input :approved, label: 'Approved', input_html: { class: 'checkbox' }
-  = f.submit 'Submit', class: 'btn'
+.wrapper
+  = simple_form_for [ :admin, @post ] do |f|
+    = f.input :title, label: false, placeholder: "Title"
+    = f.input :content, label: false, placeholder: "Description"
+    = f.input :approved, label: 'Approved', wrapper_html: { class: 'inline' }
+    .pull-right= f.submit 'Submit', class: 'button'
+    .clear

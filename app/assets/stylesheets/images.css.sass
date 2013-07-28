@@ -1,0 +1,32 @@
+img
+  @include border-radius-4
+
+.pic
+  @include border-radius-200
+  @include grey-box-shadow
+  cursor: pointer
+  width: 400px
+  height: 400px
+  margin: 0px 20px
+  
+  &:hover
+    opacity: 0.6
+
+#emily_pic
+  background-image: url('emily.jpeg')
+  background-position: 30% 
+  background-size: 600px
+
+#neo_pic
+  background-image: url('neo.jpeg')
+  background-position: center
+  background-size: 700px
+
+.stretch
+  width: 875px
+  opacity: 1.0 
+  @include border-radius-2
+  -webkit-transition: all 0.75s ease
+  -moz-transition: all 0.75s ease
+  -o-transition: all 0.75s ease
+  transition: all 0.75s ease

@@ -1,24 +1,28 @@
-#new_administrators
-  .administrator
-    = link_to '#' do
-      %div{ id: "#{@administrator.first_name.downcase}_pic", class: 'stretch' }
-      .spacer &nbsp;
-      
-      %div{ id: "#{@administrator.first_name.downcase}_profile"}
-    
-        %h1.name= link_to @administrator.name, administrator_url(first_name: @administrator.first_name)
+#administrators
+  #show
+    .wrapper
+      = link_to '#' do
+        %div{ id: "#{@administrator.first_name.downcase}_pic", class: 'pic stretch' }
 
-        %p.telephone
-          = telephone_icon(24)
-          %span= phone_number_link @administrator.phone
+      .wrapper.profile 
 
-        %p.email
-          = email_icon(24)
-          %span= mail_to @administrator.email, @administrator.email, subject: 'Hi'
+        .pull-left
+          %h2.name= link_to @administrator.name, administrator_url(first_name: @administrator.first_name)
 
-        %p.pull-right.profiles
-          = link_to github_icon(50), @administrator.github
-          = link_to linked_in_icon(50), @administrator.linked_in
-          = link_to twitter_icon(50), @administrator.twitter
-    
-        = convert_to_markdown @administrator.bio
+          %p.icon
+            = telephone_icon(24)
+            %span= phone_number_link @administrator.phone
+
+          %p.icon
+            = email_icon(24)
+            %span= mail_to @administrator.email, @administrator.email, subject: 'Hi'
+
+        .pull-right
+          %p.small.pull-right.profiles
+            = link_to github_icon(50), @administrator.github
+            = link_to linked_in_icon(50), @administrator.linked_in
+            = link_to twitter_icon(50), @administrator.twitter
+
+        .clear
+
+        %p.code= @administrator.bio

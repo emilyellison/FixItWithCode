@@ -1,59 +1,31 @@
-#new_administrators
-  - @administrators.each do |administrator|
-    .administrator
-      = link_to '#' do
-        %div{ id: "#{administrator.first_name.downcase}_pic" }
-        .spacer &nbsp;
+#administrators
+  #index
+    - @administrators.each do |administrator|
           
-        %div{ id: "#{administrator.first_name.downcase}_profile"}
-        
-          %h1.name= link_to administrator.name, administrator_url(first_name: administrator.first_name)
+      .wrapper.pull-left
+        %div{ id: "#{administrator.first_name.downcase}_pic", class: 'pic' }
 
-          %p.telephone
-            = telephone_icon(24)
-            %span= phone_number_link administrator.phone
+        .wrapper.profile 
 
-          %p.email
-            = email_icon(24)
-            %span= mail_to administrator.email, administrator.email, subject: 'Hi'
+          .pull-left
+            %h2.name= link_to administrator.name, administrator_url(first_name: administrator.first_name)
 
-          %p.pull-right.profiles
-            = link_to github_icon(50), administrator.github
-            = link_to linked_in_icon(50), administrator.linked_in
-            = link_to twitter_icon(50), administrator.twitter
-        
-          = convert_to_markdown administrator.bio
-.clear
-          
-:javascript
-  $(document).ready( function() { 
+            %p.icon
+              = telephone_icon(24)
+              %span= phone_number_link administrator.phone
 
-    $('#emily_profile').hide();
-    $('#neo_profile').hide();
+            %p.icon
+              = email_icon(24)
+              %span= mail_to administrator.email, administrator.email, subject: 'Hi'
 
-    $("#neo_pic").live('click', function() {
-      $('#emily_pic').hide();
-      $(this).addClass('stretch');
-      $("#neo_profile").slideDown();
-    });
+          .pull-right
+            %p.pull-right.profiles
+              = link_to github_icon(50), administrator.github
+              = link_to linked_in_icon(50), administrator.linked_in
+              = link_to twitter_icon(50), administrator.twitter
 
-    $("#neo_pic.stretch").live('click', function() {
-      $('#emily_pic').show();
-      $(this).removeClass('stretch');
-      $("#neo_profile").hide();
-    });
+          .clear
 
-    $("#emily_pic").live('click', function() {
-      $('#neo_pic').hide();
-      $(this).addClass('stretch');
-      $("#emily_profile").slideDown();		
-    });
-    
-    $("#emily_pic.stretch").live('click', function() {
-      $('#neo_pic').show();
-      $(this).removeClass('stretch');
-      $("#emily_profile").hide();
-    });
-    
-	
-  });
+          %p.code= administrator.bio
+      
+    .clear

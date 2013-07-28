@@ -1,12 +1,21 @@
-#box
-  .banner
-    .ribbon.left
-    %p= link_to 'FIX IT WITH CODE', root_url
-    .ribbon.right
-    
-#menu
-  = link_to 'Blog', posts_url
-  &bull;
-  = link_to 'RSS', posts_feed_url
-  &bull;
-  = link_to 'About', administrators_url  
+%header
+  .brand= link_to 'FIX IT WITH CODE', root_url
+  
+  .navigation
+    - if current_admin.present?
+      = link_to 'Projects', admin_projects_url
+      &bull;
+      = link_to 'Posts', admin_posts_url
+      &bull;
+      = link_to 'Comments', admin_comments_url
+      &bull;
+      = link_to 'Administrators', admin_administrators_url
+      &bull;
+      = link_to 'Logout', admin_logout_url
+      
+    - else
+      = link_to 'Blog', posts_url
+      &bull;
+      = link_to 'RSS', posts_feed_url
+      &bull;
+      = link_to 'About', administrators_url  

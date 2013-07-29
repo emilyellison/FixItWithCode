@@ -1,6 +1,6 @@
 $(document).ready( function() { 
 
-  if ($('#administrators').length) {
+  if ($('#administrators').length && $('#index').length) {
 
     $('.profile').hide();
 

@@ -8,4 +8,4 @@
           = attribute.split('_').join(' ').capitalize
         %td
           = @administrator.send(attribute)  
-%p= link_to '&larr; Back', admin_administrators_path, class: 'button'
+%p= link_to '&larr; Back'.html_safe, admin_administrators_path, class: 'button'

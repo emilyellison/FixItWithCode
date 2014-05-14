@@ -12,9 +12,9 @@ gem 'inherited_resources'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'redcarpet'
 gem 'kaminari'
-gem 'libv8', '~> 3.11.8'
 gem 'friendly_id'
 gem 'gon'
+gem 'therubyracer'
 gem "galetahub-simple_captcha", :require => "simple_captcha"
 
 group :development, :test do

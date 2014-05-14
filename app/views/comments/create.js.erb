@@ -1,1 +1,5 @@
-$('#new_comment').replaceWith("<p class='notice'>Thanks! Your comment has been submitted.</p><br/>").hide().fadeIn();
+<% if @comment.persisted? %>
+  $('#new_comment').replaceWith("<p class='notice'>Thanks! Your comment has been submitted.</p><br/>").hide().fadeIn();
+<% else %>
+  $('#new_comment').prepend("<p class='notice'>Whoops! Your comment could not be submitted. Please make sure to include a comment and fill in the captcha.</p><br/>").hide().fadeIn();
+<% end %>

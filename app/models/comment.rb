@@ -1,10 +1,12 @@
 class Comment < ActiveRecord::Base
+  # Gems
+  apply_simple_captcha
   
   # Associations
   belongs_to :post
   
   # Attributes
-  attr_accessible :approved, :content, :name, :post_id
+  attr_accessible :approved, :content, :name, :post_id, :captcha, :captcha_key
   
   # Validations
   validates_presence_of :content, :post_id
